@@ -1,9 +1,9 @@
 var mongoose = require("mongoose");
 var Scehma = mongoose.Schema;
 
-var ProductSchema = new Scehma({
+var productSchema = new Scehma({
 
    
 })
 
-module.exports = mongoose.model("product", userSchema);
+module.exports = mongoose.model("product", productSchema);
