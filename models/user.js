@@ -11,12 +11,12 @@ var userSchema = new Scehma({
 		type: String,
 		required: true
 	},
-	email:{
-	type: String
-		required:true
+	email: {
+		type: String,
+		required: true
 	},
 	gender: {
-		type: string,
+		type: String,
 		required: true,
 	},
 	birthday: {
@@ -27,13 +27,13 @@ var userSchema = new Scehma({
 		type: String,
 	},
 	special_dates: {
-		type: String,
+		type: [String],
 	},
 	phone: {
 		type: Number,
 	},
 	Bank_account: {
-		type: string,
+		type: String,
 		required: true,
 	},
 

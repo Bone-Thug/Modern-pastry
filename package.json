@@ -16,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/Bone-Thug/Modern-pastry/issues"
   },
-  "homepage": "https://github.com/Bone-Thug/Modern-pastry#readme"
+  "homepage": "https://github.com/Bone-Thug/Modern-pastry#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "mongoose": "^4.11.1"
+  }
 }

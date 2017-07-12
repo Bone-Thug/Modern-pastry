@@ -1,13 +1,10 @@
 var mongoose = require("mongoose");
-var Scehma = mongoose.Schema;
-var orderSchema = new Scehma({
+var Schema = mongoose.Schema;
+var orderSchema = new Schema({
 	user: {
 		type: String,
 	},
-	products: [{
-		type: Schema.ObjectId,
-		ref: 'product'
-	}],
+	products: [{type: Schema.ObjectId,ref: 'product'}],
 	discount_percentage: {
 		type: Number,
 		default: 0
@@ -20,4 +17,5 @@ var orderSchema = new Scehma({
 	}
 
 })
+//var product  = mongoose.model('product', productSchema);
 module.exports = mongoose.model("order", orderSchema);

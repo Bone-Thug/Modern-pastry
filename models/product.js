@@ -1,9 +1,9 @@
 var mongoose = require("mongoose");
-var Scehma = mongoose.Schema;
+var Schema = mongoose.Schema;
 
-var productSchema = new Scehma({
+var productSchema = new Schema({
 
-		productName: {
+		Name: {
 			type: String,
 			required: true
 		},
@@ -34,7 +34,7 @@ var productSchema = new Scehma({
 			type: [String]
 		},
 	users_id:{
-		type: [string]
+		type: [String]
 	}
-	}),
+	})
 module.exports = mongoose.model("product", productSchema);
