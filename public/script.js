@@ -22,7 +22,7 @@ app.config(function ($routeProvider) {
         //        })
         .when('/', {
             controller: 'newsCtrl',
-            templateUrl: 'components/home.html'
+            templateUrl: 'components/home/home.html'
         })
 
         .when('/about', {
@@ -39,11 +39,11 @@ app.config(function ($routeProvider) {
         })
         .when('/sign-up', {
             controller: 'newsCtrl',
-            templateUrl: 'components/sign-up.html'
+            templateUrl: 'components/home/sign-up.html'
         })
         .when('/sign-in', {
             controller: 'newsCtrl',
-            templateUrl: 'components/sign-in.html'
+            templateUrl: 'components/home/sign-in.html'
         })
         .otherwise({
             redirectTo: '/'
