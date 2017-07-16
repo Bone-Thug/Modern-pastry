@@ -10,12 +10,6 @@ app.directive('myNav', function () {
     }
 });
 
-app.directive('myBody', function () {
-    return {
-        templateUrl: 'body.html'
-    }
-});
-
 app.config(function ($routeProvider) {
     $routeProvider
         .when('/', {
@@ -42,6 +36,14 @@ app.config(function ($routeProvider) {
             redirectTo: '/'
         })
 });
+
+app.directive('myBody', function () {
+    return {
+        templateUrl: 'body.html'
+    }
+});
+
+
 
 window.onscroll = function () {
     scrollFunction()
