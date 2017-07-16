@@ -14,7 +14,12 @@ var orderSchema = new Schema({
 	},
 	date_time: {
 		type: String,
-	}
+	},
+	 user: {
+        type: Schema.Types.ObjectId,
+        ref: "User",
+        required: true
+    }
 
 })
 //var product  = mongoose.model('product', productSchema);
