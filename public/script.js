@@ -1,6 +1,8 @@
 var app = angular.module("myApp", ["ngRoute"]);
 
-app.controller("mainCtrl", function ($scope, $http) {});
+app.controller("mainCtrl", function ($scope, $http) {
+    
+});
 
 app.directive('myNav', function () {
     return {
@@ -16,34 +18,25 @@ app.directive('myBody', function () {
 
 app.config(function ($routeProvider) {
     $routeProvider
-        //        .when("/", {
-        //            controller: 'mainCtrl',
-        //            templateUrl: 'components/index.html'
-        //        })
         .when('/', {
-            controller: 'newsCtrl',
-            templateUrl: 'components/home/home.html'
+            controller: 'mainCtrl',
+            templateUrl: './components/home/home.html'
         })
-
         .when('/about', {
             controller: 'aboutCtrl',
-            templateUrl: 'components/about/about.html'
+            templateUrl: './components/about/about.html'
         })
-        .when('/contact', {
-            controller: 'contactCtrl',
-            templateUrl: 'components/contact/contact.html'
-        })
-        .when('/news', {
-            controller: 'newsCtrl',
-            templateUrl: 'components/news/news.html'
+        .when('/product', {
+            controller: 'productCtrl',
+            templateUrl: './components/contact/contact.html'
         })
         .when('/sign-up', {
-            controller: 'newsCtrl',
-            templateUrl: 'components/home/sign-up.html'
+            controller: 'signupCtrl',
+            templateUrl: './components/home/sign-up.html'
         })
         .when('/sign-in', {
-            controller: 'newsCtrl',
-            templateUrl: 'components/home/sign-in.html'
+            controller: 'signinCtrl',
+            templateUrl: './components/home/sign-in.html'
         })
         .otherwise({
             redirectTo: '/'
