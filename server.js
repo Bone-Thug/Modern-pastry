@@ -19,7 +19,7 @@ app.use(bodyParser.json());
 app.use("/api/Modernpastry/users", require("./routes/userRoutes"));
 app.use("/api/Modernpastry/products", require("./routes/productRoutes"));
 app.use("/api", expressJwt({secret: config.secret}));
-app.use("/api/Modernpastry/orders", require("./routes/orderRoutes"));
+app.use("/api/order", require("./routes/orderRoutes"));
 app.use("/auth", require("./routes/authRoutes"));
 
 
@@ -32,5 +32,5 @@ mongoose.connect("mongodb://localhost/customers-data", function() {
 })
 
 app.listen(5000, function() {
-    console.log("server listening on port 8000");
+    console.log("server listening on port 5000");
 });

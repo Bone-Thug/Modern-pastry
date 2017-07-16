@@ -21,7 +21,7 @@ authRoutes.post("/login", function(req, res) {
                 if(err) throw (err);
                 if(!match) res.status(401).json({success: false, message: "Incorrect password"});
                 else {
-                    var token = jwt.sign(user.toObject(), config.secret, {expiresIn: "1h"});
+                    var token = jwt.sign(user.toObject(), config.secret, {expiresIn: "10h"});
                     res.json({user: user.withoutPassword(), token: token, success: true, message: "Here's your token!"});
                 }
             });
